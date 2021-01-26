@@ -28,7 +28,7 @@ resources:
     type: git
     check_every: 1m
     source:
-      branch: main
+      branch: build-bosh-release-in-repo
       ignore_paths:
         - rds-broker.version
       private_key: ((tagging_key))
@@ -38,7 +38,7 @@ resources:
     type: semver
     check_every: 24h
     source:
-      branch: main
+      branch: build-bosh-release-in-repo
       driver: git
       file: rds-broker.version
       git_user: "GovUK-PaaS-CI-User <the-multi-cloud-paas-team+ci-github-user@digital.cabinet-office.gov.uk>"
